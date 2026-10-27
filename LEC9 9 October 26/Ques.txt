@@ -1,0 +1,16 @@
+1)
+Write a program to find if the given string contains 3 continuous characters
+if yes, print the index of starting letter else print -1
+input: abbdefab
+output: 3
+at 3 there is def
+
+2)
+read 2 strings of small alphabets only,
+find how many characters to be deleted to make them anagram
+aabbcd
+abbde
+Output:3
+
+3)
+write a program to find the value of nCr = n!/(r! X (n-r)!)

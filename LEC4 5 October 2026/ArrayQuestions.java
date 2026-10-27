@@ -1,0 +1,18 @@
+
+public class ArrayQuestions {
+    public static void main(String[] args) {
+        //Find kth minimum of the array
+        // k=1: min, k=2: 2nd min, k=3, 3rd
+
+        //check given array is sorted or not
+
+        //find position of given element x in array a of n elements
+
+        //Find length of max sorted portion of the array
+        //1 2 9 5 6 7 8 9 4 5
+        //answer:5
+
+        //Shift all zeroes to the end of the array
+        //1 0 2 5 8 4 0 0 2 3
+    }
+}

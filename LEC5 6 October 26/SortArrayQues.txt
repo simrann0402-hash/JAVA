@@ -1,0 +1,7 @@
+1) read a line and print the words in sorted order of length
+input: this is a line of words
+output: a is of this line words
+
+2)Read a line and print the integers in sorted order
+input: 23 45 77 11 30 60
+output: 11 23 30 45 60 77
