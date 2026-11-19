@@ -1,10 +1,11 @@
 //19 november 26, thursday
 package com.dao;
-
+import java.util.List;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 
 public class GenericDao {
     Connection connection;
@@ -32,6 +33,21 @@ public class GenericDao {
             }
         }catch(Exception e){
             throw new RuntimeException(e);
+        }
+    }
+    void performTransaction(List<String> sqpCommands) throws SQLException{
+        try{
+            connection.setAutoCommit(false);
+            for(String sql : sqpCommands){
+                Statement statement = connection.createStatement();
+                statement.executeUpdate(sql);
+            }
+            connection.commit();
+        } catch (SQLException e) {
+            connection.rollback();
+            throw e;
+        } finally {
+            connection.setAutoCommit(true);
         }
     }
 }
